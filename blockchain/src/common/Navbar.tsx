@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useState } from "react";
+import {useState } from "react";
 import { useSelector } from "react-redux";
 export const Navbar = () => {
   const [wallet, setWallet] = useState(false);
@@ -9,7 +9,7 @@ export const Navbar = () => {
         <li>About</li>
         <li>Home</li>
         <li>Contact Us</li>
-        <div
+       {walletDetails?.length>0&&<div
           style={{ marginLeft: "auto", marginRight: 20, cursor:'pointer' }}
           onClick={() => setWallet(true)}
         >
@@ -23,7 +23,7 @@ export const Navbar = () => {
               </div>
             )
           )}
-        </div>
+        </div>}
       </ul>
     </header>
   );
