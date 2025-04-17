@@ -1,0 +1,87 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 8fr;
+  grid-template-rows: 2fr 8fr 5fr;
+  height: 100vh;
+  grid-template-areas:
+    "navbar navbar navbar navbar"
+    "main main main main"
+    "footer footer footer footer";
+  grid-gap: 0.2rem;
+  font-size: 20px;
+  color: black;
+  text-align: center;
+}
+
+header {
+  height: 100px;
+  grid-area: navbar;
+  background-color: rgb(0 20 27);
+}
+.ul-tag{
+  display: flex;
+  color: #d0d834;
+  list-style-type:none;
+  gap: 15px;
+  font-size: 14px;
+  align-items: center;
+  margin-top: 40px;
+}
+li:hover{
+  color: blue;
+  cursor: pointer;
+  
+}
+.main {
+  grid-area: main;
+  background-color: "#FFFFFF";
+}
+.meta-btn{
+  width: 228px;
+  height: 55px;
+  border-radius: 8px;
+  background: black;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 50px;
+  cursor: pointer;
+}
+.h4-tag{
+  padding:20px;
+  border:'1px solid black';
+  background:lightblue;
+  text-align:center;
+  border-radius: 12px;
+}
+.div-wallet{
+  margin: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+footer {
+  height: 100px;
+  grid-area: footer;
+  background-color: rgb(0 20 27);
+  color: #d0d834;
+  font-size: 14px;
+  padding-bottom: 0px;
+  padding-top: 100px;
+}
+.subDiv {
+  height: 500px;
+  margin: auto;
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 10fr 5fr;
+    height: 100vh;
+    grid-template-areas:
+      "navbar navbar navbar navbar"
+      "main main main main"
+      "footer footer footer footer";
+    grid-gap: 0.2rem;
+  }
+}
