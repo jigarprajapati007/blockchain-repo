@@ -4,7 +4,7 @@ const payloadPersisted = localStorage.getItem("payLoad")||''
 const walletSlice = createSlice({
   name: "walletInfo",
   initialState: {
-    info: [JSON.parse(payloadPersisted)],
+    info:payloadPersisted? [JSON.parse(payloadPersisted)]:[],
   },
   reducers: {
     walletInformation: (state: any, action) => {
