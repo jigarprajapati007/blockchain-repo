@@ -9,7 +9,9 @@ export const MetamaskConnect = () => {
   const [count, setCount] = useState();
   const dispatch = useDispatch();
   const walletDetails = useSelector((state: any) => state?.wallet?.info);
-  const contractAddress = "0xb8A1808ED814874d318a7E9444ef8fBBBE63c0c9";
+
+  //Please change your metamas account deployed contract address to check smart contract increment.
+  const contractAddress = "0xb8A1808ED814874d318a7E9444ef8fBBBE63c0c9";  
 
   const connectWallet = async () => {
     //@ts-ignore
